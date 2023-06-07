@@ -1,6 +1,6 @@
 {
   "name": "@haus-automation/iobroker-adapter-tools",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Helper functions for ioBroker adapter development",
   "author": {
     "name": "Matthias Kleine",
