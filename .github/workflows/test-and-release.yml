@@ -67,11 +67,10 @@ jobs:
 
       - name: Publish package to npm
         run: |
-          npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
           npm whoami
           npm publish
-          env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create Github Release
         uses: actions/create-release@v1

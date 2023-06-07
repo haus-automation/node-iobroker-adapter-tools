@@ -44,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/haus-automation/node-iobroker-adapter-tools/issues"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "publishConfig": {
+    "access": "public"
+  }
 }
