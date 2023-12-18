@@ -21,4 +21,12 @@ module.exports = class AdapterToolsBase extends utils.Adapter {
 
         return false;
     }
+
+    logSensitive(msg) {
+        let newMsg = msg;
+        for (const attr of this.ioPack.protectedNative) {
+            newMsg = (typeof msg === 'string' && this.config[attr]) ? msg.replace(this.config[attr], `**config.${attr}**`) : msg;
+        }
+        this.log.debug(newMsg);
+	}
 };
